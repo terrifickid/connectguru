@@ -68,10 +68,10 @@ function CaseStudies({ caseStudies }) {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          With Actia Advisors as a part of your advisory board, you'll gain
+          With Actia Advisors as a part of your advisory board, you&apos;ll gain
           access to a wide range of expert advice. Actia Advisors has an
-          established track record of successfully building some of the world's
-          most prosperous tech companies.
+          established track record of successfully building some of the
+          world&apos;s most prosperous tech companies.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -145,12 +145,12 @@ function Services() {
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Strategic Planning and Execution">
               At Actia Advisors, we specialize in crafting and executing
-              strategic plans tailored to your organization's unique goals. Our
-              seasoned advisors work closely with your team to identify growth
-              opportunities, navigate challenges, and implement strategies that
-              drive success. With a proven track record in strategic planning,
-              we ensure your business is equipped to thrive in a dynamic and
-              competitive landscape.
+              strategic plans tailored to your organization&apos;s unique goals.
+              Our seasoned advisors work closely with your team to identify
+              growth opportunities, navigate challenges, and implement
+              strategies that drive success. With a proven track record in
+              strategic planning, we ensure your business is equipped to thrive
+              in a dynamic and competitive landscape.
             </ListItem>
             <ListItem title="Technology Innovation Consulting">
               Stay at the forefront of technological advancements with Actia
@@ -163,7 +163,7 @@ function Services() {
             </ListItem>
             <ListItem title="Leadership Development Programs">
               Unlock the full potential of your leadership team with Actia
-              Advisors' tailored leadership development programs. Our
+              Advisors&apos; tailored leadership development programs. Our
               experienced advisors provide personalized coaching, training, and
               mentorship to cultivate strong, adaptive leaders. By honing
               leadership skills, fostering collaboration, and promoting

@@ -39,12 +39,12 @@ function Culture() {
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Dedication" invert>
-            Our team's unwavering commitment stems from the beginning, fostering
-            a bond beyond LinkedIn profiles.
+            Our team&apos;s unwavering commitment stems from the beginning,
+            fostering a bond beyond LinkedIn profiles.
           </GridListItem>
           <GridListItem title="Flexibility" invert>
-            Work isn't bound by time; it's about continuous dedication every
-            waking moment.
+            Work isn&apos;t bound by time; it&apos;s about continuous dedication
+            every waking moment.
           </GridListItem>
           <GridListItem title="Empathy" invert>
             Acknowledging personal challenges, we maintain a supportive
@@ -196,27 +196,29 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            It's universally acknowledged that launching startups can be an
+            It&apos;s universally acknowledged that launching startups can be an
             arduous endeavor, and their likelihood of success is notoriously
-            limited. The key to triumph doesn't solely lie in having a team with
-            exceptional skills; it's about having a skillful team that 's well -
-            connected within a robust and supportive ecosystem. Innovation isn't
-            an isolated event - it's a collective endeavor.
+            limited. The key to triumph doesn&apos;t solely lie in having a team
+            with exceptional skills; it&apos;s about having a skillful team that
+            &apos;s well - connected within a robust and supportive ecosystem.
+            Innovation isn&apos;t an isolated event - it&apos;s a collective
+            endeavor.
           </p>
           <p>
             Actai Advisor serves as the consultative extension of the Actai
-            community. Our role is to guide our clients, making certain they're
-            linked with the most conducive ecosystem to propel their success.
+            community. Our role is to guide our clients, making certain
+            they&apos;re linked with the most conducive ecosystem to propel
+            their success.
           </p>
           <p>
-            Actai Advisor isn't just a profit driven organization; it was built
-            first and foremost as an instrument for persistently cultivating
-            lasting change and meaningful impact in the world. With each company
-            we bring on board as a client, we form an equity business
-            partnership. Half of this equity is contributed to our legacy impact
-            fund. This fund is committed to supporting the causes and projects
-            that are dear to our community and embody the v alues we deeply
-            uphold.
+            Actai Advisor isn&apos;t just a profit driven organization; it was
+            built first and foremost as an instrument for persistently
+            cultivating lasting change and meaningful impact in the world. With
+            each company we bring on board as a client, we form an equity
+            business partnership. Half of this equity is contributed to our
+            legacy impact fund. This fund is committed to supporting the causes
+            and projects that are dear to our community and embody the v alues
+            we deeply uphold.
           </p>
           <p>
             Actai Advisors is a digital platform that champions cultural
@@ -228,10 +230,10 @@ export default async function About() {
             development. Membership offers access to influential advisors,
             technologists, funds, and philanthropists, enabling members to
             establish significant connections that lead to global impact. The
-            platform's industry classification system is focused on technology
-            individuals and enterprises committed to solving real - world
-            problems together. Actai Advisors harnesses capacity and ex pertise
-            to create solutions that have a positive impact
+            platform&apos;s industry classification system is focused on
+            technology individuals and enterprises committed to solving real -
+            world problems together. Actai Advisors harnesses capacity and ex
+            pertise to create solutions that have a positive impact
           </p>
         </div>
       </PageIntro>
