@@ -1,35 +1,35 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
-import { loadCaseStudies } from '@/lib/mdx'
+import { ContactSection } from "@/components/ContactSection";
+import { Container } from "@/components/Container";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { List, ListItem } from "@/components/List";
+import { SectionIntro } from "@/components/SectionIntro";
+import { StylizedImage } from "@/components/StylizedImage";
+import { Testimonial } from "@/components/Testimonial";
+import logoBrightPath from "@/images/clients/bright-path/logo-light.svg";
+import logoFamilyFund from "@/images/clients/family-fund/logo-light.svg";
+import logoGreenLife from "@/images/clients/green-life/logo-light.svg";
+import logoHomeWork from "@/images/clients/home-work/logo-light.svg";
+import logoMailSmirk from "@/images/clients/mail-smirk/logo-light.svg";
+import logoNorthAdventures from "@/images/clients/north-adventures/logo-light.svg";
+import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
+import logoPhobiaLight from "@/images/clients/phobia/logo-light.svg";
+import logoUnseal from "@/images/clients/unseal/logo-light.svg";
+import imageLaptop from "@/images/laptop.jpg";
+import { loadCaseStudies } from "@/lib/mdx";
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
+  ["Phobia", logoPhobiaLight],
+  ["Family Fund", logoFamilyFund],
+  ["Unseal", logoUnseal],
+  ["Mail Smirk", logoMailSmirk],
+  ["Home Work", logoHomeWork],
+  ["Green Life", logoGreenLife],
+  ["Bright Path", logoBrightPath],
+  ["North Adventures", logoNorthAdventures],
+];
 
 function Clients() {
   return (
@@ -57,20 +57,21 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
-  )
+  );
 }
 
 function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Introducing Actia Advisors"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          With Actia Advisors as a part of your advisory board, you'll gain
+          access to a wide range of expert advice. Actia Advisors has an
+          established track record of successfully building some of the world's
+          most prosperous tech companies.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -91,10 +92,10 @@ function CaseStudies({ caseStudies }) {
                 </h3>
                 <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time
-                    dateTime={caseStudy.date.split('-')[0]}
+                    dateTime={caseStudy.date.split("-")[0]}
                     className="font-semibold"
                   >
-                    {caseStudy.date.split('-')[0]}
+                    {caseStudy.date.split("-")[0]}
                   </time>
                   <span className="text-neutral-300" aria-hidden="true">
                     /
@@ -113,7 +114,7 @@ function CaseStudies({ caseStudies }) {
         </FadeInStagger>
       </Container>
     </>
-  )
+  );
 }
 
 function Services() {
@@ -121,12 +122,13 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="The Ultimate Web Start Up Advisor"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Embark on a transformative journey with Actia Advisors, where
+          innovation meets strategy. Elevate your business with our
+          expert-guided services
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -141,51 +143,69 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Strategic Planning and Execution">
+              At Actia Advisors, we specialize in crafting and executing
+              strategic plans tailored to your organization's unique goals. Our
+              seasoned advisors work closely with your team to identify growth
+              opportunities, navigate challenges, and implement strategies that
+              drive success. With a proven track record in strategic planning,
+              we ensure your business is equipped to thrive in a dynamic and
+              competitive landscape.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Technology Innovation Consulting">
+              Stay at the forefront of technological advancements with Actia
+              Advisors. Our expert consultants guide you through the rapidly
+              evolving tech landscape, helping you harness the latest
+              innovations to enhance efficiency and drive innovation within your
+              organization. From adopting cutting-edge solutions to fostering a
+              culture of continuous innovation, we empower you to lead in the
+              digital age.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Leadership Development Programs">
+              Unlock the full potential of your leadership team with Actia
+              Advisors' tailored leadership development programs. Our
+              experienced advisors provide personalized coaching, training, and
+              mentorship to cultivate strong, adaptive leaders. By honing
+              leadership skills, fostering collaboration, and promoting
+              strategic thinking, we empower your executives to navigate
+              challenges and drive organizational excellence.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Investor Relations and Funding Strategies">
+              Navigate the complexities of fundraising and investor relations
+              with confidence. Actia Advisors brings a wealth of experience in
+              securing investments for tech companies. Our team assists you in
+              developing compelling investment narratives, refining pitch decks,
+              and connecting with the right investors. From seed funding to
+              Series rounds, we guide you through the entire fundraising
+              journey.
             </ListItem>
           </List>
         </div>
       </Container>
     </>
-  )
+  );
 }
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
-}
+    "We are a development studio working at the intersection of design and technology.",
+};
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  let caseStudies = (await loadCaseStudies()).slice(0, 3);
 
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+          <h1 className="font-display font-medium text-5xl tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+            Accelerating innovation for startups, investors, and fund managers.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            Our primary aim is to package and curate data on startups and
+            opportunities within the community to members. This enables a
+            stronger, more connected network that increases the capacity of
+            founders and companies in the ecosystem.
           </p>
         </FadeIn>
       </Container>
@@ -196,16 +216,15 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: "Aristole", logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        A person s potential is greater than what it IS, and that potential is
+        only unlocked when he or she interacts with another person
       </Testimonial>
 
       <Services />
 
       <ContactSection />
     </>
-  )
+  );
 }
