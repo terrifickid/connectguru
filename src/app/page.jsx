@@ -197,8 +197,8 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: "Aristole", logo: canvalogo }}
       >
-        A person's potential is greater than what it IS, and that potential is
-        only unlocked when he or she interacts with another person
+        A person&apos;s potential is greater than what it IS, and that potential
+        is only unlocked when he or she interacts with another person
       </Testimonial>
 
       <Services />
