@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   createContext,
@@ -7,21 +7,21 @@ import {
   useId,
   useRef,
   useState,
-} from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+} from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
-import { SocialMedia } from '@/components/SocialMedia'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
+import { GridPattern } from "@/components/GridPattern";
+import { Logo, Logomark } from "@/components/Logo";
+import { Offices } from "@/components/Offices";
+import { SocialMedia } from "@/components/SocialMedia";
 
-const RootLayoutContext = createContext(null)
+const RootLayoutContext = createContext(null);
 
 function XIcon(props) {
   return (
@@ -29,7 +29,7 @@ function XIcon(props) {
       <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
       <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
     </svg>
-  )
+  );
 }
 
 function MenuIcon(props) {
@@ -37,7 +37,7 @@ function MenuIcon(props) {
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path d="M2 6h20v2H2zM2 16h20v2H2z" />
     </svg>
-  )
+  );
 }
 
 function Header({
@@ -48,7 +48,7 @@ function Header({
   toggleRef,
   invert = false,
 }) {
-  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)
+  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext);
 
   return (
     <Container>
@@ -59,11 +59,7 @@ function Header({
           //onMouseEnter={() => setLogoHovered(true)}
           //onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logo
-            className=""
-            invert={invert}
-            filled={logoHovered}
-          />
+          <Logo className="" invert={invert} filled={logoHovered} />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
@@ -73,27 +69,27 @@ function Header({
             ref={toggleRef}
             type="button"
             onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
+            aria-expanded={expanded ? "true" : "false"}
             aria-controls={panelId}
             className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
+              "group -m-2.5 rounded-full p-2.5 transition",
+              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
             )}
             aria-label="Toggle navigation"
           >
             <Icon
               className={clsx(
-                'h-6 w-6',
+                "h-6 w-6",
                 invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                  ? "fill-white group-hover:fill-neutral-200"
+                  : "fill-neutral-950 group-hover:fill-neutral-700"
               )}
             />
           </button>
         </div>
       </div>
     </Container>
-  )
+  );
 }
 
 function NavigationRow({ children }) {
@@ -103,7 +99,7 @@ function NavigationRow({ children }) {
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
     </div>
-  )
+  );
 }
 
 function NavigationItem({ href, children }) {
@@ -115,56 +111,52 @@ function NavigationItem({ href, children }) {
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
-  )
+  );
 }
 
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
+        <NavigationItem href="/">Our Work</NavigationItem>
         <NavigationItem href="/about">About Us</NavigationItem>
       </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
-      </NavigationRow>
     </nav>
-  )
+  );
 }
 
 function RootLayoutInner({ children }) {
-  let panelId = useId()
-  let [expanded, setExpanded] = useState(false)
-  let openRef = useRef(null)
-  let closeRef = useRef(null)
-  let navRef = useRef(null)
-  let shouldReduceMotion = useReducedMotion()
+  let panelId = useId();
+  let [expanded, setExpanded] = useState(false);
+  let openRef = useRef(null);
+  let closeRef = useRef(null);
+  let navRef = useRef(null);
+  let shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     function onClick(event) {
       if (
         event.target instanceof HTMLElement &&
-        event.target.closest('a')?.href === window.location.href
+        event.target.closest("a")?.href === window.location.href
       ) {
-        setExpanded(false)
+        setExpanded(false);
       }
     }
 
-    window.addEventListener('click', onClick)
+    window.addEventListener("click", onClick);
 
     return () => {
-      window.removeEventListener('click', onClick)
-    }
-  }, [])
+      window.removeEventListener("click", onClick);
+    };
+  }, []);
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
-          aria-hidden={expanded ? 'true' : undefined}
-          inert={expanded ? '' : undefined}
+          aria-hidden={expanded ? "true" : undefined}
+          inert={expanded ? "" : undefined}
         >
           <Header
             panelId={panelId}
@@ -172,10 +164,10 @@ function RootLayoutInner({ children }) {
             toggleRef={openRef}
             expanded={expanded}
             onToggle={() => {
-              setExpanded((expanded) => !expanded)
+              setExpanded((expanded) => !expanded);
               window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true }),
-              )
+                closeRef.current?.focus({ preventScroll: true })
+              );
             }}
           />
         </div>
@@ -183,10 +175,10 @@ function RootLayoutInner({ children }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
+          style={{ height: expanded ? "auto" : "0.5rem" }}
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
-          aria-hidden={expanded ? undefined : 'true'}
-          inert={expanded ? undefined : ''}
+          aria-hidden={expanded ? undefined : "true"}
+          inert={expanded ? undefined : ""}
         >
           <motion.div layout className="bg-neutral-800">
             <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
@@ -197,10 +189,10 @@ function RootLayoutInner({ children }) {
                 toggleRef={closeRef}
                 expanded={expanded}
                 onToggle={() => {
-                  setExpanded((expanded) => !expanded)
+                  setExpanded((expanded) => !expanded);
                   window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true }),
-                  )
+                    openRef.current?.focus({ preventScroll: true })
+                  );
                 }}
               />
             </div>
@@ -251,16 +243,16 @@ function RootLayoutInner({ children }) {
         </motion.div>
       </motion.div>
     </MotionConfig>
-  )
+  );
 }
 
 export function RootLayout({ children }) {
-  let pathname = usePathname()
-  let [logoHovered, setLogoHovered] = useState(false)
+  let pathname = usePathname();
+  let [logoHovered, setLogoHovered] = useState(false);
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
       <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
     </RootLayoutContext.Provider>
-  )
+  );
 }

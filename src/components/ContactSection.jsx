@@ -1,7 +1,7 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { FadeIn } from "@/components/FadeIn";
+import { Offices } from "@/components/Offices";
 
 export function ContactSection() {
   return (
@@ -14,7 +14,7 @@ export function ContactSection() {
             </h2>
             <div className="mt-6 flex">
               <Button href="/contact" invert>
-                Say Hej
+                Say Hey
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">
@@ -30,5 +30,5 @@ export function ContactSection() {
         </div>
       </FadeIn>
     </Container>
-  )
+  );
 }

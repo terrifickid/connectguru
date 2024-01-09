@@ -8,27 +8,23 @@ import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
 import { Testimonial } from "@/components/Testimonial";
-import logoBrightPath from "@/images/clients/bright-path/logo-light.svg";
-import logoFamilyFund from "@/images/clients/family-fund/logo-light.svg";
-import logoGreenLife from "@/images/clients/green-life/logo-light.svg";
-import logoHomeWork from "@/images/clients/home-work/logo-light.svg";
-import logoMailSmirk from "@/images/clients/mail-smirk/logo-light.svg";
-import logoNorthAdventures from "@/images/clients/north-adventures/logo-light.svg";
-import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
-import logoPhobiaLight from "@/images/clients/phobia/logo-light.svg";
+import canvalogo from "@/images/canva.svg";
+import zoomlogo from "@/images/zoom.svg";
+import wishlogo from "@/images/wish.svg";
+
 import logoUnseal from "@/images/clients/unseal/logo-light.svg";
-import imageLaptop from "@/images/laptop.jpg";
+import imageLaptop from "@/images/whiteboard.jpg";
 import { loadCaseStudies } from "@/lib/mdx";
 
 const clients = [
-  ["Phobia", logoPhobiaLight],
-  ["Family Fund", logoFamilyFund],
-  ["Unseal", logoUnseal],
-  ["Mail Smirk", logoMailSmirk],
-  ["Home Work", logoHomeWork],
-  ["Green Life", logoGreenLife],
-  ["Bright Path", logoBrightPath],
-  ["North Adventures", logoNorthAdventures],
+  ["Canva", canvalogo],
+  ["Zoom", zoomlogo],
+  ["Wish", wishlogo],
+  ["Metagood", canvalogo],
+  ["Oneof", canvalogo],
+  ["Dapper Labs", canvalogo],
+  ["Hut8mining", canvalogo],
+  ["Gigaverse", canvalogo],
 ];
 
 function Clients() {
@@ -37,19 +33,23 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            We’ve worked with hundreds of amazing companies
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center"
           >
             {clients.map(([client, logo]) => (
-              <li key={client}>
+              <li key={client} class="flex items-center justify-center p-10">
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <img
+                    src={logo.src}
+                    alt={client}
+                    style={{ filter: "saturate(0%) brightness(500%)" }}
+                  />
                 </FadeIn>
               </li>
             ))}
@@ -76,41 +76,20 @@ function CaseStudies({ caseStudies }) {
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split("-")[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split("-")[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                Actai Individual
+              </p>
+              <ul>
+                <li>Access to the Actai directory</li>
+                <li>Individual Profile (with linkedin link & calendly)</li>
+                <li>Premium Curated Monthly Email</li>
+              </ul>
+
+              <button>Apply Now</button>
+            </article>
+          </FadeIn>
         </FadeInStagger>
       </Container>
     </>
@@ -216,9 +195,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: "Aristole", logo: logoPhobiaDark }}
+        client={{ name: "Aristole", logo: canvalogo }}
       >
-        A person s potential is greater than what it IS, and that potential is
+        A person's potential is greater than what it IS, and that potential is
         only unlocked when he or she interacts with another person
       </Testimonial>
 

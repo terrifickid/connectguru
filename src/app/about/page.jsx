@@ -58,72 +58,47 @@ function Culture() {
 
 const team = [
   {
-    title: "Leadership",
+    title: "Advisors",
     people: [
       {
-        name: "Leslie Alexander",
-        role: "Co-Founder / CEO",
+        name: "Bill Tai",
+        role: "Venture Capitalist, Athlete, Adjunct Professor",
         image: { src: imageLeslieAlexander },
       },
       {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
+        name: "Lars Rasmussen",
+        role: "Co-Founder, Google Maps",
         image: { src: imageMichaelFoster },
       },
       {
-        name: "Dries Vincent",
-        role: "Partner & Business Relations",
+        name: "Young Sohn",
+        role: "Founding Managing Partner, Walden Catalyst",
         image: { src: imageDriesVincent },
       },
-    ],
-  },
-  {
-    title: "Team",
-    people: [
       {
-        name: "Chelsea Hagon",
-        role: "Senior Developer",
-        image: { src: imageChelseaHagon },
+        name: "George Kikvadze",
+        role: "Executive Vice Chairman, BitFury Group",
+        image: { src: imageDriesVincent },
       },
       {
-        name: "Emma Dorsey",
-        role: "Senior Designer",
-        image: { src: imageEmmaDorsey },
+        name: "Jaeson Ma",
+        role: "CEO OP3N",
+        image: { src: imageDriesVincent },
       },
       {
-        name: "Leonard Krasner",
-        role: "VP, User Experience",
-        image: { src: imageLeonardKrasner },
+        name: "Suna Said",
+        role: "Founder and CEO, Nima Capital LLC",
+        image: { src: imageDriesVincent },
       },
       {
-        name: "Blake Reid",
-        role: "Junior Copywriter",
-        image: { src: imageBlakeReid },
+        name: "Danish Chaudhry",
+        role: "CEO & Co-Founder, FMFW.io",
+        image: { src: imageDriesVincent },
       },
       {
-        name: "Kathryn Murphy",
-        role: "VP, Human Resources",
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: "Whitney Francis",
-        role: "Content Specialist",
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: "Jeffrey Webb",
-        role: "Account Coordinator",
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: "Benjamin Russel",
-        role: "Senior Developer",
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: "Angela Fisher",
-        role: "Front-end Developer",
-        image: { src: imageAngelaFisher },
+        name: "George Bachiashvili",
+        role: "Founder and CEO, Mission Gate Inc",
+        image: { src: imageDriesVincent },
       },
     ],
   },
@@ -150,20 +125,11 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                          </div>
+                        <div className="group relative overflow-hidden ">
+                          <p className="font-display text-base/6 font-semibold tracking-wide">
+                            {person.name}
+                          </p>
+                          <p className="mt-2 text-sm">{person.role}</p>
                         </div>
                       </FadeIn>
                     </li>
@@ -239,22 +205,15 @@ export default async function About() {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="50M" label="Potential Impact Fund" />
+          <StatListItem value="200+" label="Members in Harmony" />
+          <StatListItem value="100%" label="Startup Success Spark" />
         </StatList>
       </Container>
 
       <Culture />
 
       <Team />
-
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
 
       <ContactSection />
     </>
