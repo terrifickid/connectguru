@@ -118,8 +118,8 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/">Our Services</NavigationItem>
+        <NavigationItem href="/about">About Actai</NavigationItem>
       </NavigationRow>
     </nav>
   );

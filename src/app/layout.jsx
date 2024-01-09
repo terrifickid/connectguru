@@ -1,13 +1,14 @@
-import { RootLayout } from '@/components/RootLayout'
+import { RootLayout } from "@/components/RootLayout";
 
-import '@/styles/tailwind.css'
+import "@/styles/tailwind.css";
 
 export const metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: "Actai Advisors",
+    default:
+      "Actai Advisors - Accelerating innovation for startups, investors, and fund managers.",
   },
-}
+};
 
 export default function Layout({ children }) {
   return (
@@ -16,5 +17,5 @@ export default function Layout({ children }) {
         <RootLayout>{children}</RootLayout>
       </body>
     </html>
-  )
+  );
 }

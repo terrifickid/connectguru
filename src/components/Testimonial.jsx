@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image";
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { GridPattern } from '@/components/GridPattern'
+import { Container } from "@/components/Container";
+import { FadeIn } from "@/components/FadeIn";
+import { GridPattern } from "@/components/GridPattern";
 
 export function Testimonial({ children, client, className }) {
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32',
-        className,
+        "relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32",
+        className
       )}
     >
       <GridPattern
@@ -24,13 +24,11 @@ export function Testimonial({ children, client, className }) {
               <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
                 {children}
               </p>
+              - {client.name}
             </blockquote>
-            <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
-            </figcaption>
           </figure>
         </FadeIn>
       </Container>
     </div>
-  )
+  );
 }

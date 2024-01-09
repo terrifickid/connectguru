@@ -40,15 +40,16 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center"
+            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center sm:gap-x-44 lg:gap-x-52 gap-y-12"
           >
             {clients.map(([client, logo]) => (
-              <li key={client} class="flex items-center justify-center p-10">
+              <li key={client} class="flex items-center justify-center">
                 <FadeIn>
                   <img
                     src={logo.src}
                     alt={client}
                     style={{ filter: "saturate(0%) brightness(500%)" }}
+                    className="px-8 md:px-0"
                   />
                 </FadeIn>
               </li>
@@ -90,6 +91,38 @@ function CaseStudies({ caseStudies }) {
               <button>Apply Now</button>
             </article>
           </FadeIn>
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                Actai Company
+              </p>
+              <ul>
+                <li>Access to the Actai directory</li>
+                <li>Company profile with deck</li>
+                <li>Premium Curated Monthly Email</li>
+              </ul>
+
+              <button>Apply Now</button>
+            </article>
+          </FadeIn>
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                Actai Advisor Partnership
+              </p>
+              <ul>
+                <li>White Glove Service</li>
+                <li>Official Actai Advisory Partner</li>
+                <li>Advisor Matching</li>
+                <li>One on One Access</li>
+                <li>Actai Advisor as Equity Partner</li>
+                <li>Full time member of your team</li>
+                <li>Advisor Cap Table and Agreement management</li>
+              </ul>
+
+              <button>Apply Now</button>
+            </article>
+          </FadeIn>
         </FadeInStagger>
       </Container>
     </>
@@ -123,40 +156,27 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Strategic Planning and Execution">
-              At Actia Advisors, we specialize in crafting and executing
-              strategic plans tailored to your organization&apos;s unique goals.
-              Our seasoned advisors work closely with your team to identify
-              growth opportunities, navigate challenges, and implement
-              strategies that drive success. With a proven track record in
-              strategic planning, we ensure your business is equipped to thrive
-              in a dynamic and competitive landscape.
+              With a proven track record in strategic planning, we ensure your
+              business is equipped to thrive in a dynamic and competitive
+              landscape.
             </ListItem>
             <ListItem title="Technology Innovation Consulting">
               Stay at the forefront of technological advancements with Actia
               Advisors. Our expert consultants guide you through the rapidly
               evolving tech landscape, helping you harness the latest
               innovations to enhance efficiency and drive innovation within your
-              organization. From adopting cutting-edge solutions to fostering a
-              culture of continuous innovation, we empower you to lead in the
-              digital age.
+              organization.
             </ListItem>
             <ListItem title="Leadership Development Programs">
               Unlock the full potential of your leadership team with Actia
               Advisors&apos; tailored leadership development programs. Our
               experienced advisors provide personalized coaching, training, and
-              mentorship to cultivate strong, adaptive leaders. By honing
-              leadership skills, fostering collaboration, and promoting
-              strategic thinking, we empower your executives to navigate
-              challenges and drive organizational excellence.
+              mentorship to cultivate strong, adaptive leaders.
             </ListItem>
             <ListItem title="Investor Relations and Funding Strategies">
               Navigate the complexities of fundraising and investor relations
               with confidence. Actia Advisors brings a wealth of experience in
-              securing investments for tech companies. Our team assists you in
-              developing compelling investment narratives, refining pitch decks,
-              and connecting with the right investors. From seed funding to
-              Series rounds, we guide you through the entire fundraising
-              journey.
+              securing investments for tech companies.
             </ListItem>
           </List>
         </div>
