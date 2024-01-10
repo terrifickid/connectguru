@@ -47,7 +47,11 @@ function RadioInput({ label, ...props }) {
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form action="https://vapi-le6wug7tlq-vp.a.run.app/actai" method="post">
+      <form
+        action="https://vapi-le6wug7tlq-vp.a.run.app/actai"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+      >
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
