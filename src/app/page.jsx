@@ -146,7 +146,7 @@ function CaseStudies({ caseStudies }) {
               </Button>
             </article>
           </FadeIn>
-          <FadeIn className="flex">
+          <FadeIn className="flex hidden">
             <article className="relative  w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Company
@@ -210,7 +210,7 @@ function CaseStudies({ caseStudies }) {
               </Button>
             </article>
           </FadeIn>
-          <FadeIn className="flex hidden">
+          <FadeIn className="flex">
             <article className="relative  w-full flex-col rounded-3xl p-6  ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Advisor Partnership
