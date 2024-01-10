@@ -64,7 +64,12 @@ function ArrowIcon(props) {
 
 function NewsletterForm() {
   return (
-    <form className="max-w-sm">
+    <form
+      className="max-w-sm"
+      action="https://vapi-le6wug7tlq-vp.a.run.app/actai"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+    >
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
         Sign up for our newsletter
       </h2>
@@ -79,6 +84,7 @@ function NewsletterForm() {
           autoComplete="email"
           aria-label="Email address"
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+          name="email"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
