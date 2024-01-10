@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Button } from "@/components/Button";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
@@ -11,6 +11,11 @@ import { Testimonial } from "@/components/Testimonial";
 import canvalogo from "@/images/canva.svg";
 import zoomlogo from "@/images/zoom.svg";
 import wishlogo from "@/images/wish.svg";
+import metagoodlogo from "@/images/metagood.svg";
+import oneoflogo from "@/images/oneof.svg";
+import dapperlabslogo from "@/images/dapperlabs.svg";
+import hut8logo from "@/images/hut8.png";
+import gigaverselogo from "@/images/gigaverse.webp";
 
 import logoUnseal from "@/images/clients/unseal/logo-light.svg";
 import imageLaptop from "@/images/whiteboard.jpg";
@@ -20,18 +25,18 @@ const clients = [
   ["Canva", canvalogo],
   ["Zoom", zoomlogo],
   ["Wish", wishlogo],
-  ["Metagood", canvalogo],
-  ["Oneof", canvalogo],
-  ["Dapper Labs", canvalogo],
-  ["Hut8mining", canvalogo],
-  ["Gigaverse", canvalogo],
+  ["Metagood", metagoodlogo],
+  ["Oneof", oneoflogo],
+  ["Dapper Labs", dapperlabslogo],
+  ["Hut8mining", hut8logo],
+  ["Gigaverse", gigaverselogo],
 ];
 
 function Clients() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
+        <FadeIn className=" items-center ">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             We’ve worked with hundreds of amazing companies
           </h2>
@@ -40,7 +45,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center sm:gap-x-44 lg:gap-x-52 gap-y-12"
+            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center gap-x-24 sm:gap-x-40 lg:gap-x-40 xl:gap-x-52 gap-y-12"
           >
             {clients.map(([client, logo]) => (
               <li key={client} class="flex items-center justify-center">
@@ -78,49 +83,265 @@ function CaseStudies({ caseStudies }) {
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <FadeIn className="flex">
-            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Individual
               </p>
-              <ul>
-                <li>Access to the Actai directory</li>
-                <li>Individual Profile (with linkedin link & calendly)</li>
-                <li>Premium Curated Monthly Email</li>
+              <ul class="pb-20">
+                <li className="border-b py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Access to the Actai directory
+                </li>
+                <li className="border-b py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Individual Profile (with linkedin link & calendly)
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Premium Curated Monthly Email
+                </li>
               </ul>
 
-              <button>Apply Now</button>
+              <Button href="/contact" className="absolute bottom-8">
+                Apply Now
+              </Button>
             </article>
           </FadeIn>
           <FadeIn className="flex">
-            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Company
               </p>
-              <ul>
-                <li>Access to the Actai directory</li>
-                <li>Company profile with deck</li>
-                <li>Premium Curated Monthly Email</li>
+              <ul class="pb-20">
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Access to the Actai directory
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Company profile with deck
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Premium Curated Monthly Email
+                </li>
               </ul>
 
-              <button>Apply Now</button>
+              <Button href="/contact" className="absolute bottom-8">
+                Apply Now
+              </Button>
             </article>
           </FadeIn>
           <FadeIn className="flex">
-            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col rounded-3xl p-6  ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Advisor Partnership
               </p>
-              <ul>
-                <li>White Glove Service</li>
-                <li>Official Actai Advisory Partner</li>
-                <li>Advisor Matching</li>
-                <li>One on One Access</li>
-                <li>Actai Advisor as Equity Partner</li>
-                <li>Full time member of your team</li>
-                <li>Advisor Cap Table and Agreement management</li>
+              <ul class="pb-20">
+                <li className="border-b  py-2 flex ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  White Glove Service
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Official Actai Advisory Partner
+                </li>
+                <li className="border-b  py-2 flex">
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Advisor Matching
+                </li>
+                <li className="border-b  py-2 flex">
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  One on One Access
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Actai Advisor as Equity Partner
+                </li>
+                <li className="border-b  py-2 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Full time member of your team
+                </li>
+                <li className="border-b  py-2 flex ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-2 flex-shrink-0"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Advisor Cap Table and Agreement management
+                </li>
               </ul>
 
-              <button>Apply Now</button>
+              <Button href="/contact" className="absolute bottom-8">
+                Apply Now
+              </Button>
             </article>
           </FadeIn>
         </FadeInStagger>
