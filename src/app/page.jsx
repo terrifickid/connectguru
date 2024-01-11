@@ -45,7 +45,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center gap-x-24 sm:gap-x-40 lg:gap-x-40 xl:gap-x-52 gap-y-12"
+            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center xs:gap-x-24 sm:gap-x-40 lg:gap-x-40 xl:gap-x-52 gap-y-12"
           >
             {clients.map(([client, logo]) => (
               <li key={client} class="flex items-center justify-center">
