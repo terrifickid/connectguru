@@ -62,7 +62,7 @@ function Header({
           <Logo className="" invert={invert} filled={logoHovered} />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
+          <Button className="hidden" href="/contact" invert={invert}>
             Contact us
           </Button>
           <button
@@ -79,7 +79,7 @@ function Header({
           >
             <Icon
               className={clsx(
-                "h-6 w-6",
+                "h-6 w-6 hidden",
                 invert
                   ? "fill-white group-hover:fill-neutral-200"
                   : "fill-neutral-950 group-hover:fill-neutral-700"
@@ -175,8 +175,8 @@ function RootLayoutInner({ children }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          style={{ height: expanded ? "auto" : "0rem" }}
+          className="relative z-50 overflow-hidden bg-neutral-950 "
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
         >
@@ -224,19 +224,12 @@ function RootLayoutInner({ children }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            yOffset={-96}
-            interactive
-          />
-
           <main className="w-full flex-auto">{children}</main>
 
           <Footer />

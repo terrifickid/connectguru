@@ -205,8 +205,8 @@ export default async function About() {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="50M" label="Potential Impact Fund" />
-          <StatListItem value="200+" label="Members in Harmony" />
+          <StatListItem value="Billions" label="Potential Capital Pool" />
+          <StatListItem value="3000" label="Members" />
           <StatListItem value="100%" label="Startup Success Spark" />
         </StatList>
       </Container>

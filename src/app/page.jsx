@@ -34,7 +34,7 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24  bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className=" items-center ">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -83,7 +83,7 @@ function CaseStudies({ caseStudies }) {
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <FadeIn className="flex">
-            <article className="relative  w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Individual
               </p>
@@ -147,7 +147,7 @@ function CaseStudies({ caseStudies }) {
             </article>
           </FadeIn>
           <FadeIn className="flex hidden">
-            <article className="relative  w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col  p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Company
               </p>
@@ -211,7 +211,7 @@ function CaseStudies({ caseStudies }) {
             </article>
           </FadeIn>
           <FadeIn className="flex">
-            <article className="relative  w-full flex-col rounded-3xl p-6  ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <article className="relative  w-full flex-col  p-6  ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
               <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                 Actai Advisor Partnership
               </p>
@@ -364,17 +364,25 @@ function Services() {
           expert-guided services
         </p>
       </SectionIntro>
+
+      <video width="640" height="360" autoPlay loop muted playsInline>
+        <source
+          src="https://ak.picdn.net/shutterstock/videos/1037534741/preview/stock-footage-graphic-pattern-that-moves-to-the-lower-right-with-zoom-composed-of-designs-and-shapes-with.mp4"
+          type="video/mp4"
+          style={{
+            filter: "hue-rotate(90deg)", // Adjust the angle as needed
+            width: "100%", // Adjust the width as needed
+          }}
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <FadeIn>
+        <img src="https://images.creativemarket.com/0.1.0/ps/14002265/600/400/m2/fpnw/wm1/1658097961516-.jpg?1662875019&s=85744d885b0f98008388426deb890ce9&fmt=webp" />
+      </FadeIn>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
-          </div>
+          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12"></div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Strategic Planning and Execution">
               With a proven track record in strategic planning, we ensure your
