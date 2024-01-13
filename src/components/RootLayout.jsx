@@ -62,7 +62,7 @@ function Header({
           <Logo className="" invert={invert} filled={logoHovered} />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button className="hidden" href="/contact" invert={invert}>
+          <Button href="/contact" invert={invert}>
             Contact us
           </Button>
           <button
@@ -79,7 +79,7 @@ function Header({
           >
             <Icon
               className={clsx(
-                "h-6 w-6 hidden",
+                "h-6 w-6",
                 invert
                   ? "fill-white group-hover:fill-neutral-200"
                   : "fill-neutral-950 group-hover:fill-neutral-700"
