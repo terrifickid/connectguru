@@ -27,22 +27,22 @@ export function ContactSection() {
               />
             </div>
           </div>
+          <video
+            width="640"
+            height="360"
+            className="mt-12"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src=" https://ak.picdn.net/shutterstock/videos/1086741119/preview/stock-footage-game-of-light-and-shadow-on-the-rows-of-d-figures-of-blue-color-design-grainy-texture-of.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <video
-          width="640"
-          height="360"
-          className="mt-12"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source
-            src=" https://ak.picdn.net/shutterstock/videos/1086741119/preview/stock-footage-game-of-light-and-shadow-on-the-rows-of-d-figures-of-blue-color-design-grainy-texture-of.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
       </FadeIn>
     </Container>
   );
