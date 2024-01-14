@@ -368,7 +368,7 @@ function Services() {
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12"></div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+          <List className="mt-16 lg:mt-0 lg:pl-4">
             <ListItem title="Strategic Planning and Execution">
               With a proven track record in strategic planning, we ensure your
               business is equipped to thrive in a dynamic and competitive
