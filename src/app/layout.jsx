@@ -50,7 +50,7 @@ function ContactForm() {
       method="POST"
       enctype="application/x-www-form-urlencoded"
     >
-      <h2 className="font-display text-5xl font-semibold text-neutral-950 text-center">
+      <h2 className="font-display text-5xl font-semibold text-neutral-950 text-center mb-10">
         Join Connect Guru
       </h2>
       <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
@@ -91,9 +91,9 @@ function ContactForm() {
         <TextInput label="Website" name="website" />
       </div>
       <div class="flex justify-center">
-        <Button type="submit" className="mt-10 bg-blue-600 text-4xl rounded-md">
+        <Button type="submit" className="mt-12 bg-blue-600 text-4xl rounded-md">
           <span class="text-3xl p-2 font-semibold block">
-            Let's work together
+            Let&apos;s work together
           </span>
         </Button>
       </div>
