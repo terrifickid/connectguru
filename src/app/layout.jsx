@@ -83,7 +83,7 @@ function ContactForm() {
           autoComplete="Name of Company"
         />
         <TextInput
-          label="Phase of Project (Seed, Series A, Series B, Series C)"
+          label="Phase of Project"
           name="phaseOfProject"
           autoComplete="Phase of Project"
         />
