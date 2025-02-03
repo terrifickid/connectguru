@@ -50,7 +50,7 @@ function ContactForm() {
       method="POST"
       enctype="application/x-www-form-urlencoded"
     >
-      <h2 className="font-display text-5xl font-semibold text-neutral-950 text-center mb-10">
+      <h2 className="font-display text-xl lg:text-5xl font-semibold text-neutral-950 text-center mb-10">
         Join Connect Guru
       </h2>
       <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
@@ -92,7 +92,7 @@ function ContactForm() {
       </div>
       <div class="flex justify-center">
         <Button type="submit" className="mt-12 bg-blue-600 text-4xl rounded-md">
-          <span class="text-3xl p-2 font-semibold block">
+          <span class="lg:text-3xl p-2 font-semibold block">
             Let&apos;s work together
           </span>
         </Button>
@@ -148,7 +148,7 @@ export default function Layout({ children }) {
           </div>
         </div>
 
-        <div id="contact" class="bg-white py-32">
+        <div id="contact" class="bg-white py-32 px-6">
           <div class="container mx-auto">
             <div class="max-w-3xl mx-auto">
               <ContactForm />
