@@ -27,8 +27,10 @@ export default function Layout({ children }) {
             <img src={pageone.src} />
           </div>
         </div>
-        <div class="container mx-auto">
-          <img src={pagetwo.src} />
+        <div class="bg-white">
+          <div class="container mx-auto">
+            <img src={pagetwo.src} />
+          </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
