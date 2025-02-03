@@ -21,7 +21,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html lang="en" className="">
-      <body class="bg-[#13151d]">
+      <body style={{ backgroundColor: "#13151d" }}>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
             <img src={pageone.src} />
