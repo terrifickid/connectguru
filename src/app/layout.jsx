@@ -107,36 +107,48 @@ export default function Layout({ children }) {
       <body style={{ backgroundColor: "#13151d" }}>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pageone.src} />
+            <a href="#contact">
+              <img src={pageone.src} />
+            </a>
           </div>
         </div>
         <div class="bg-white">
           <div class="container mx-auto">
-            <img src={pagetwo.src} />
+            <a href="#contact">
+              <img src={pagetwo.src} />
+            </a>
           </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pagethree.src} />
+            <a href="#contact">
+              <img src={pagethree.src} />
+            </a>
           </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pagefour.src} />
+            <a href="#contact">
+              <img src={pagefour.src} />
+            </a>
           </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pagefive.src} />
+            <a href="#contact">
+              <img src={pagefive.src} />
+            </a>
           </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pagesix.src} />
+            <a href="#contact">
+              <img src={pagesix.src} />
+            </a>
           </div>
         </div>
 
-        <div class="bg-white py-32">
+        <div id="contact" class="bg-white py-32">
           <div class="container mx-auto">
             <div class="max-w-3xl mx-auto">
               <ContactForm />
@@ -146,12 +158,16 @@ export default function Layout({ children }) {
 
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pageseven.src} />
+            <a href="#contact">
+              <img src={pageseven.src} />
+            </a>
           </div>
         </div>
         <div class="bg-[#13151d]">
           <div class="container mx-auto">
-            <img src={pageeight.src} />
+            <a href="#contact">
+              <img src={pageeight.src} />
+            </a>
           </div>
         </div>
       </body>
