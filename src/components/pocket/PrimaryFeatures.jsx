@@ -26,23 +26,23 @@ const MotionAppScreenBody = motion(AppScreen.Body);
 
 const features = [
   {
-    name: "Invite friends for better returns",
+    name: "AI-Enhanced Expertise",
     description:
-      "For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.",
+      "Leverage our unique AI-driven platform that combines advanced technology with the wisdom of industry-leading advisors—tailored to your specific needs.",
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: "Notifications on stock dips",
+    name: "Personalized, Data-Driven Insights",
     description:
-      "Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.",
+      "Gain actionable insights and trend analyses powered by AI, keeping you ahead in an ever-evolving market.",
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: "Invest what you want",
+    name: "A Global Network for Impact",
     description:
-      "We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.",
+      "Join a thriving community of innovators and advisors dedicated to driving sustainable growth and transformative change.",
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
