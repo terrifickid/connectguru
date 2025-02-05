@@ -10,6 +10,7 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@leafac/rehype-shiki": "^2.2.1",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
@@ -30,7 +31,8 @@
     "remark-unwrap-images": "^3.0.1",
     "shiki": "^0.11.1",
     "tailwindcss": "^3.3.2",
-    "unified-conditional": "0.0.2"
+    "unified-conditional": "0.0.2",
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
     "eslint": "8.26.0",
