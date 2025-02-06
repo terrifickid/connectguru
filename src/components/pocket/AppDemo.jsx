@@ -168,8 +168,8 @@ export function AppDemo() {
       <AppScreen.Body>
         <div className="p-4">
           <div className="flex gap-2">
-            <div className="text-xs/6 text-gray-500">Tailwind Labs, Inc.</div>
-            <div className="text-sm text-gray-900">$CSS</div>
+            <div className="text-xs/6 text-gray-500">Dashboard</div>
+
             <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
               <path
                 d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
@@ -183,9 +183,9 @@ export function AppDemo() {
           <div className="mt-3 border-t border-gray-200 pt-5">
             <div className="flex items-baseline gap-2">
               <div className="text-2xl tracking-tight text-gray-900 tabular-nums">
-                {activeValue.toFixed(2)}
+                {activeValue.toFixed(0)}
               </div>
-              <div className="text-sm text-gray-900">USD</div>
+
               {percentageChange && (
                 <div
                   className={clsx(

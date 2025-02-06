@@ -176,11 +176,8 @@ function InviteScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
-        <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
-        </AppScreen.Subtitle>
+        <AppScreen.Title>Contact</AppScreen.Title>
+        <AppScreen.Subtitle></AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
@@ -200,7 +197,7 @@ function InviteScreen(props) {
             ))}
           </div>
           <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-            Invite person
+            Enrich Contact
           </div>
         </div>
       </MotionAppScreenBody>
@@ -212,8 +209,8 @@ function StocksScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
+        <AppScreen.Title>Companies</AppScreen.Title>
+        <AppScreen.Subtitle></AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
@@ -288,9 +285,7 @@ function StocksScreen(props) {
                 {stock.name}
               </div>
               <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
-                </div>
+                <div className="text-sm font-medium text-gray-900"></div>
                 <div
                   className={clsx(
                     "text-xs/5",
@@ -314,9 +309,9 @@ function InvestScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
+        <AppScreen.Title>School</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
+          <span className="text-white"></span> RMIT University
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -325,12 +320,11 @@ function InvestScreen(props) {
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
-              { label: "Number of shares", value: "100" },
+              { label: "Number of contacts", value: "100" },
               {
-                label: "Current market price",
+                label: "Current social graph",
                 value: (
                   <div className="flex">
-                    $34.28
                     <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                       <path
                         d="M17 15V7H9M17 7 7 17"
@@ -343,7 +337,7 @@ function InvestScreen(props) {
                   </div>
                 ),
               },
-              { label: "Estimated cost", value: "$3,428.00" },
+              { label: "Lifetime Value", value: "$3,428.00" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -356,7 +350,7 @@ function InvestScreen(props) {
               </div>
             ))}
             <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-              Buy shares
+              Explore
             </div>
           </div>
         </div>
