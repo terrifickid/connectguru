@@ -136,7 +136,16 @@ export function Hero() {
               decision-making, and impact globally.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <AppStoreLink />
+              <p>
+                <Button href="https://calendly.com/lilybb/talk" invert={false}>
+                  Schedule Call
+                </Button>
+              </p>
+              <p>
+                <Button href="/contact" invert={false}>
+                  Apply to be Advised
+                </Button>
+              </p>
             </div>
           </div>
 

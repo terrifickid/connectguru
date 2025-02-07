@@ -155,66 +155,57 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Uniting Tech for Global Impact.">
-        <p>
-          Connecting Tech Innovators with Purpose, Profit, and a Transformative
-          Ecosystem
-        </p>
+      <PageIntro eyebrow="About us" title="Actai Advisors">
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            It&apos;s universally acknowledged that launching startups can be an
-            arduous endeavor, and their likelihood of success is notoriously
-            limited. The key to triumph doesn&apos;t solely lie in having a team
-            with exceptional skills; it&apos;s about having a skillful team that
-            &apos;s well - connected within a robust and supportive ecosystem.
-            Innovation isn&apos;t an isolated event - it&apos;s a collective
-            endeavor.
+            At Actai Advisors, we believe that the power of connection fuels
+            innovation and success. As a premier networking and business
+            development firm, we harness the power of artificial intelligence
+            and human connection to create meaningful, high-impact relationships
+            that drive growth.
           </p>
+
           <p>
-            Actai Advisor serves as the consultative extension of the Actai
-            community. Our role is to guide our clients, making certain
-            they&apos;re linked with the most conducive ecosystem to propel
-            their success.
+            With a global community of 8,000+ entrepreneurs, investors, and
+            industry leaders, we act as a Super Connector, unlocking new
+            opportunities and fostering collaboration across diverse industries,
+            including venture capital, artificial intelligence, and emerging
+            markets.
           </p>
+
           <p>
-            Actai Advisor isn&apos;t just a profit driven organization; it was
-            built first and foremost as an instrument for persistently
-            cultivating lasting change and meaningful impact in the world. With
-            each company we bring on board as a client, we form an equity
-            business partnership. Half of this equity is contributed to our
-            legacy impact fund. This fund is committed to supporting the causes
-            and projects that are dear to our community and embody the v alues
-            we deeply uphold.
+            Our proprietary AI-powered networking platform and AI-enabled
+            telephone advisor work around the clock to ensure that our members
+            connect with the right people at the right time—helping businesses
+            scale faster and making every interaction more valuable.
           </p>
+
           <p>
-            Actai Advisors is a digital platform that champions cultural
-            advancement and sustainability by supporting individual
-            entrepreneurs and companies. It connects a community of Athletes,
-            Conservationists, Technologists, Artists, and I nnovators to
-            encourage collaboration and engagement with a community - first
-            approach to advancing tech startups and global sustainable
-            development. Membership offers access to influential advisors,
-            technologists, funds, and philanthropists, enabling members to
-            establish significant connections that lead to global impact. The
-            platform&apos;s industry classification system is focused on
-            technology individuals and enterprises committed to solving real -
-            world problems together. Actai Advisors harnesses capacity and ex
-            pertise to create solutions that have a positive impact
+            Founded by Bill Tai, Lily Dash, and Maria Serafica, Actai Advisors
+            is more than just a network—it’s an ecosystem of innovation,
+            collective intelligence, and curated connections designed to
+            maximize potential.
+          </p>
+
+          <p>
+            Join us in redefining the future of networking and unlocking new
+            possibilities—one connection at a time.
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="Billions" label="Potential Capital Pool" />
-          <StatListItem value="3000" label="Members" />
-          <StatListItem value="100%" label="Startup Success Spark" />
-        </StatList>
-      </Container>
+      <div class="hidden">
+        <Container className="mt-16">
+          <StatList>
+            <StatListItem value="Billions" label="Potential Capital Pool" />
+            <StatListItem value="3000" label="Members" />
+            <StatListItem value="100%" label="Startup Success Spark" />
+          </StatList>
+        </Container>
 
-      <Culture />
+        <Culture />
 
-      <Team />
-
+        <Team />
+      </div>
       <ContactSection />
     </>
   );
