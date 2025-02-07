@@ -6,6 +6,8 @@ import { motion, useInView, useMotionValue } from "framer-motion";
 
 import { AppScreen } from "@/components//pocket/AppScreen";
 
+import login from "@/images/login-screen2.webp";
+
 const prices = [
   997.56, 944.34, 972.25, 832.4, 888.76, 834.8, 805.56, 767.38, 861.21, 669.6,
   694.39, 721.32, 694.03, 610.1, 502.2, 549.56, 611.03, 583.4, 610.14, 660.6,
@@ -166,7 +168,10 @@ export function AppDemo() {
   return (
     <AppScreen>
       <AppScreen.Body>
-        <div className="p-4">
+        <div class="bg-white mt-12 px-4">
+          <img src={login.src} />
+        </div>
+        <div className="p-4 hidden">
           <div className="flex gap-2">
             <div className="text-xs/6 text-gray-500">Dashboard</div>
 

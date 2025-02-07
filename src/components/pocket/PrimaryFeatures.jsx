@@ -187,6 +187,14 @@ function InviteScreen(props) {
             {[
               { label: "Full name", value: "Albert H. Wiggin" },
               { label: "Email address", value: "awiggin@chase.com" },
+              { label: "Phone number", value: "+1 212-555-7890" },
+              { label: "Address", value: "123 Wall St, New York, NY 10005" },
+              { label: "Company", value: "Chase National Bank" },
+              { label: "Position", value: "Chairman" },
+              { label: "Date of Birth", value: "February 21, 1868" },
+              { label: "Nationality", value: "American" },
+              { label: "LinkedIn", value: "linkedin.com/in/albertwiggin" },
+              { label: "Website", value: "www.chasenational.com" },
             ].map((field) => (
               <div key={field.label}>
                 <div className="text-sm text-gray-500">{field.label}</div>
@@ -196,7 +204,7 @@ function InviteScreen(props) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+          <div className=" hidden mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
             Enrich Contact
           </div>
         </div>
