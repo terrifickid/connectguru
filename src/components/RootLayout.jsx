@@ -151,7 +151,7 @@ function RootLayoutInner({ children }) {
   }, []);
 
   return (
-    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
+    <MotionConfig transition={{ duration: 0 }}>
       <header>
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
@@ -176,7 +176,7 @@ function RootLayoutInner({ children }) {
           layout
           id={panelId}
           style={{ height: expanded ? "auto" : "0rem" }}
-          className="relative z-50 overflow-hidden bg-neutral-950 "
+          className="relative z-50 overflow-hidden bg-neutral-950"
           aria-hidden={expanded ? undefined : "true"}
           inert={expanded ? undefined : ""}
         >
@@ -231,7 +231,6 @@ function RootLayoutInner({ children }) {
           className="relative isolate flex w-full flex-col pt-9"
         >
           <main className="w-full flex-auto">{children}</main>
-
           <Footer />
         </motion.div>
       </motion.div>
