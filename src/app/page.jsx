@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { Border } from "@/components/Border";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
@@ -8,6 +9,8 @@ import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
 import { Testimonial } from "@/components/Testimonial";
+import { GridPattern } from "@/components/GridPattern";
+import { GridList, GridListItem } from "@/components/GridList";
 import canvalogo from "@/images/canva.svg";
 import zoomlogo from "@/images/zoom.svg";
 import wishlogo from "@/images/wish.svg";
@@ -17,54 +20,17 @@ import dapperlabslogo from "@/images/dapperlabs.svg";
 import hut8logo from "@/images/hut8.png";
 import gigaverselogo from "@/images/gigaverse.webp";
 
-import logoUnseal from "@/images/clients/unseal/logo-light.svg";
+import logoBrightPath from "@/images/clients/bright-path/logo-dark.svg";
+import logoFamilyFund from "@/images/clients/family-fund/logo-dark.svg";
+import logoGreenLife from "@/images/clients/green-life/logo-dark.svg";
+import logoHomeWork from "@/images/clients/home-work/logo-dark.svg";
+import logoMailSmirk from "@/images/clients/mail-smirk/logo-dark.svg";
+import logoNorthAdventures from "@/images/clients/north-adventures/logo-dark.svg";
+import logoPhobia from "@/images/clients/phobia/logo-dark.svg";
+import logoUnseal from "@/images/clients/unseal/logo-dark.svg";
+
 import imageLaptop from "@/images/whiteboard.jpg";
 import { loadCaseStudies } from "@/lib/mdx";
-
-const clients = [
-  ["Canva", canvalogo],
-  ["Zoom", zoomlogo],
-  ["Wish", wishlogo],
-  ["Metagood", metagoodlogo],
-  ["Oneof", oneoflogo],
-  ["Dapper Labs", dapperlabslogo],
-  ["Hut8mining", hut8logo],
-  ["Gigaverse", gigaverselogo],
-];
-
-function Clients() {
-  return (
-    <div className="mt-24  bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className=" items-center ">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing companies
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex items-center justify-center xs:gap-x-24 sm:gap-x-40 lg:gap-x-40 xl:gap-x-52 gap-y-12"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client} class="flex items-center justify-center">
-                <FadeIn>
-                  <img
-                    src={logo.src}
-                    alt={client}
-                    style={{ filter: "saturate(0%) brightness(500%)" }}
-                    className="px-8 md:px-0"
-                  />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div>
-  );
-}
 
 function CaseStudies({ caseStudies }) {
   return (
@@ -413,6 +379,133 @@ function Services() {
   );
 }
 
+function Values() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-100 stroke-neutral-950/5"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        eyebrow="Our values"
+        title="Balancing reliability and innovation"
+      >
+        <p>
+          We strive to stay at the forefront of emerging trends and
+          technologies, while completely ignoring them and forking that old
+          Rails project we feel comfortable using. We stand by our core values
+          to justify that decision.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-24">
+        <GridList>
+          <GridListItem title="Meticulous">
+            The first part of any partnership is getting our designer to put
+            your logo in our template. The second step is getting them to do the
+            colors.
+          </GridListItem>
+          <GridListItem title="Efficient">
+            We pride ourselves on never missing a deadline which is easy because
+            most of the work was done years ago.
+          </GridListItem>
+          <GridListItem title="Adaptable">
+            Every business has unique needs and our greatest challenge is
+            shoe-horning those needs into something we already built.
+          </GridListItem>
+          <GridListItem title="Honest">
+            We are transparent about all of our processes, banking on the simple
+            fact our clients never actually read anything.
+          </GridListItem>
+          <GridListItem title="Loyal">
+            We foster long-term relationships with our clients that go beyond
+            just delivering a product, allowing us to invoice them for decades.
+          </GridListItem>
+          <GridListItem title="Innovative">
+            The technological landscape is always evolving and so are we. We are
+            constantly on the lookout for new open source projects to clone.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  );
+}
+
+function Culture() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <SectionIntro
+        eyebrow="Our culture"
+        title="Balance your passion with your passion for life."
+        invert
+      >
+        <p>
+          We are a group of like-minded people who share the same core values.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Loyalty" invert>
+            Our team has been with us since the beginning because none of them
+            are allowed to have LinkedIn profiles.
+          </GridListItem>
+          <GridListItem title="Trust" invert>
+            We don’t care when our team works just as long as they are working
+            every waking second.
+          </GridListItem>
+          <GridListItem title="Compassion" invert>
+            You never know what someone is going through at home and we make
+            sure to never find out.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  );
+}
+
+const clients = [
+  ["Phobia", logoPhobia],
+  ["Family Fund", logoFamilyFund],
+  ["Unseal", logoUnseal],
+  ["Mail Smirk", logoMailSmirk],
+  ["Home Work", logoHomeWork],
+  ["Green Life", logoGreenLife],
+  ["Bright Path", logoBrightPath],
+  ["North Adventures", logoNorthAdventures],
+];
+
+function Clients() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <FadeIn>
+        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+          You’re in good company
+        </h2>
+      </FadeIn>
+      <FadeInStagger className="mt-10" faster>
+        <Border as={FadeIn} />
+        <ul
+          role="list"
+          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
+        >
+          {clients.map(([client, logo]) => (
+            <li key={client} className="group">
+              <FadeIn className="overflow-hidden">
+                <Border className="pt-12 group-nth-[-n+2]:-mt-px sm:group-nth-3:-mt-px lg:group-nth-4:-mt-px">
+                  <Image src={logo} alt={client} unoptimized />
+                </Border>
+              </FadeIn>
+            </li>
+          ))}
+        </ul>
+      </FadeInStagger>
+    </Container>
+  );
+}
+
 export const metadata = {
   description:
     "We are a development studio working at the intersection of design and technology.",
@@ -437,6 +530,9 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
+      <Values />
+      <Culture />
+      <Clients />
     </>
   );
 }
