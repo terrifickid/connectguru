@@ -481,7 +481,7 @@ function Culture() {
             success stories, and strategic impact:
           </p>
 
-          <p>Download Our Advisory Overview Deck (PDF)</p>
+          <p className="text-2xl"><a href="#">Download Our Advisory Overview Deck (PDF)</a></p>
         </div>
       </Container>
     </div>
