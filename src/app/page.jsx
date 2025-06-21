@@ -381,7 +381,7 @@ function Services() {
 
 function Values() {
   return (
-    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+    <div className="relative  pt-242 sm:pt-32  lg:pt-40 ">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-neutral-50">
         <GridPattern
           className="absolute inset-0 h-full w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-100 stroke-neutral-950/5"
@@ -438,27 +438,37 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Our Expertise"
+        title="Our global network, led by renowned investors and industry veterans, fosters unique opportunities for collaboration, innovation, and strategic alignment across technology, sustainability, and purpose-driven initiatives."
         invert
       >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
+        <p>Our expertise includes:</p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Strategic Advisory" invert>
+            Tailored guidance to drive scalable growth and lasting impact for
+            portfolio companies through strategic planning and execution.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Community Building" invert>
+            Fostering connections with talent, investors, and industry leaders
+            through curated events and mentorship for global innovation.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Growth Acceleration" invert>
+            Hands-on support to propel portfolio companies toward rapid market
+            leadership with strategic resources and expertise.
+          </GridListItem>
+          <GridListItem title="AI-Powered Insights" invert>
+            Our AI platform monitors real-time opportunities across our 7,000+
+            member community, enabling dynamic matchmaking and collaboration.
+          </GridListItem>
+          <GridListItem title="Talent & Legal Support" invert>
+            Matching top engineering talent and providing expert legal counsel
+            on corporate structuring and compliance by Lily Dash.
+          </GridListItem>
+          <GridListItem title="Financial & Tax Expertise" invert>
+            Maria Serafica offers two decades of expertise in corporate
+            accounting, tax planning, and financial governance for tech firms.
           </GridListItem>
         </GridList>
       </Container>
@@ -530,9 +540,8 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
-      <Values />
-      <Culture />
       <Clients />
+      <Culture />
     </>
   );
 }
