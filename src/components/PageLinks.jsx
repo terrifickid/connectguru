@@ -72,11 +72,9 @@ export function PageLinks({ title, pages, intro, className }) {
         </p>
         <p class="mt-8">
           Follow The Upwind Podcast on social media to stay updated on the
-          latest episodes: 🎧 Spotify (replace "#" with your actual link) 🎙️
-          Apple Podcasts (replace "#" with your actual link) 📸 Instagram
-          (replace "#" with your actual link) 🔗 LinkedIn (replace "#" with your
-          actual link) Join us as we sail Upwind, exploring what it truly takes
-          to make a lasting difference.
+          latest episodes: 🎧 Spotify 🎙️ Apple Podcasts 📸 Instagram 🔗 LinkedIn
+          Join us as we sail Upwind, exploring what it truly takes to make a
+          lasting difference.
         </p>
       </SectionIntro>
     </div>
