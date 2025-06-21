@@ -79,12 +79,17 @@ export function PageLinks({ title, pages, intro, className }) {
           change through technology, strategic innovation, and purpose-driven
           enterprise.
         </p>
-        <p class="mt-8">
-          Follow The Upwind Podcast on social media to stay updated on the
-          latest episodes: 🎧 Spotify 🎙️ Apple Podcasts 📸 Instagram 🔗 LinkedIn
-          Join us as we sail Upwind, exploring what it truly takes to make a
-          lasting difference.
-        </p>
+        <div class="mt-8 ">
+          <p class="">
+            Follow The Upwind Podcast on social media to stay updated on the
+            latest episodes:
+          </p>
+          <p> 🎧 Spotify 🎙️ Apple Podcasts 📸 Instagram 🔗 LinkedIn</p>
+          <p>
+            Join us as we sail Upwind, exploring what it truly takes to make a
+            lasting difference.
+          </p>
+        </div>
       </SectionIntro>
     </div>
   );
