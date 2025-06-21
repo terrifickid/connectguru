@@ -24,6 +24,8 @@ import dapperlabslogo from "@/images/dapperlabs.svg";
 import hut8logo from "@/images/hut8.png";
 import gigaverselogo from "@/images/gigaverse.webp";
 
+
+
 import logoBrightPath from "@/images/clients/bright-path/logo-dark.svg";
 import logoFamilyFund from "@/images/clients/family-fund/logo-dark.svg";
 import logoGreenLife from "@/images/clients/green-life/logo-dark.svg";
@@ -437,7 +439,7 @@ function Values() {
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-24 bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our Expertise"
         title="Our global network, led by renowned investors and industry veterans, fosters unique opportunities for collaboration, innovation, and strategic alignment across technology, sustainability, and purpose-driven initiatives."
@@ -552,9 +554,8 @@ export default async function Home() {
       </Container>
 
       <Culture />
-      <Clients />
       <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
+        className=""
         title="The Upwind Podcast
 "
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
