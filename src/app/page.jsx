@@ -11,6 +11,10 @@ import { StylizedImage } from "@/components/StylizedImage";
 import { Testimonial } from "@/components/Testimonial";
 import { GridPattern } from "@/components/GridPattern";
 import { GridList, GridListItem } from "@/components/GridList";
+
+import { PageLinks } from "@/components/PageLinks";
+import { loadArticles } from "@/lib/mdx";
+
 import canvalogo from "@/images/canva.svg";
 import zoomlogo from "@/images/zoom.svg";
 import wishlogo from "@/images/wish.svg";
@@ -389,10 +393,7 @@ function Values() {
         />
       </div>
 
-      <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
-      >
+      <SectionIntro eyebrow="" title="The Upwind Podcast">
         <p>
           We strive to stay at the forefront of emerging trends and
           technologies, while completely ignoring them and forking that old
@@ -471,6 +472,12 @@ function Culture() {
             accounting, tax planning, and financial governance for tech firms.
           </GridListItem>
         </GridList>
+
+        <div>
+          Explore Our Approach Gain deeper insights into our advisory process,
+          success stories, and strategic impact: 📥 Download Our Advisory
+          Overview Deck (PDF) (replace "#" with your actual deck link)
+        </div>
       </Container>
     </div>
   );
@@ -492,7 +499,7 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          We proudly collaborate with innovative industry leaders
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
@@ -523,7 +530,7 @@ export const metadata = {
 
 export default async function Home() {
   let caseStudies = (await loadCaseStudies()).slice(0, 3);
-
+  let blogArticles = (await loadArticles()).slice(0, 2);
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
@@ -540,8 +547,16 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
-      <Clients />
+
       <Culture />
+      <Clients />
+      <PageLinks
+        className="mt-24 sm:mt-32 lg:mt-40"
+        title="The Upwind Podcast
+"
+        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        pages={blogArticles}
+      />
     </>
   );
 }
