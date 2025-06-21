@@ -473,10 +473,13 @@ function Culture() {
           </GridListItem>
         </GridList>
 
-        <div>
-          Explore Our Approach Gain deeper insights into our advisory process,
-          success stories, and strategic impact: 📥 Download Our Advisory
-          Overview Deck (PDF) (replace "#" with your actual deck link)
+        <div class="invert mt-20">
+          <p>
+            Explore Our Approach Gain deeper insights into our advisory process,
+            success stories, and strategic impact:
+          </p>
+
+          <p>Download Our Advisory Overview Deck (PDF)</p>
         </div>
       </Container>
     </div>
