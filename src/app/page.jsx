@@ -528,7 +528,7 @@ function Clients() {
 
 export const metadata = {
   description:
-    "We are a development studio working at the intersection of design and technology.",
+    " At ACTAI Advisors, we partner with exceptional entrepreneurs to scale transformative ideas into impactful global businesses.",
 };
 
 export default async function Home() {
