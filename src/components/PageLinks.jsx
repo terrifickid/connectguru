@@ -4,6 +4,10 @@ import clsx from "clsx";
 //upwind
 import Image from "next/image";
 import upwindLogo from "@/images/upwindlogo.png";
+import linkedin from "@/images/LinkedIn_2021.svg";
+import instagram from "@/images/Instagram_logo_2016.svg";
+import apple from "@/images/Podcasts_(iOS).svg";
+import spotify from "@/images/Spotify_logo_with_text.svg";
 
 import { Border } from "@/components/Border";
 import { Container } from "@/components/Container";
@@ -79,16 +83,48 @@ export function PageLinks({ title, pages, intro, className }) {
           change through technology, strategic innovation, and purpose-driven
           enterprise.
         </p>
-        <div class="mt-8 ">
-          <p class="">
-            Follow The Upwind Podcast on social media to stay updated on the
-            latest episodes:
-          </p>
-          <p> 🎧 Spotify 🎙️ Apple Podcasts 📸 Instagram 🔗 LinkedIn</p>
-          <p>
-            Join us as we sail Upwind, exploring what it truly takes to make a
-            lasting difference.
-          </p>
+        <p class="text-xl mb-4 mt-4">
+          Follow The Upwind Podcast on social media to stay updated on the
+          latest episodes:
+        </p>
+
+        <div class="mt-8 text-sm ">
+          <div class="flex flex-wrap gap-2 w-full">
+            <img
+              src={spotify.src}
+              class="object-contain h-[4vw] max-w-[25%] aspect-auto px-2"
+            />
+            <img
+              src={apple.src}
+              class="object-contain h-[4vw] max-w-[25%] aspect-auto px-2"
+            />
+
+            <img
+              src={instagram.src}
+              class="object-contain h-[4vw] max-w-[25%] aspect-auto h-12 px-2"
+            />
+            <img
+              src={linkedin.src}
+              class="object-contain h-[4vw] aspect-auto h-20 px-2"
+            />
+          </div>
+
+          <ul class="mt-8">
+            <li>
+              <a href="#">Spotify</a>
+            </li>
+            <li>
+              <a href="#">Apple Podcasts</a>
+            </li>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+          </ul>
+
+          <p class="mt-4"></p>
         </div>
       </SectionIntro>
     </div>
