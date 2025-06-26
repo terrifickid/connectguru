@@ -73,10 +73,7 @@ function NewsletterForm() {
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
         Sign up for our newsletter
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
-      </p>
+      <p className="mt-4 text-sm text-neutral-700"></p>
       <div className="relative mt-6">
         <input
           type="email"

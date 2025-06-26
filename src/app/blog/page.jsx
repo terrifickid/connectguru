@@ -1,30 +1,33 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
-import { formatDate } from '@/lib/formatDate'
-import { loadArticles } from '@/lib/mdx'
+import { Border } from "@/components/Border";
+import { Button } from "@/components/Button";
+import { ContactSection } from "@/components/ContactSection";
+import { Container } from "@/components/Container";
+import { FadeIn } from "@/components/FadeIn";
+import { PageIntro } from "@/components/PageIntro";
+import { formatDate } from "@/lib/formatDate";
+import { loadArticles } from "@/lib/mdx";
 
 export const metadata = {
-  title: 'Blog',
+  title: "Blog",
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
-}
+    "Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.",
+};
 
 export default async function Blog() {
-  let articles = await loadArticles()
+  let articles = await loadArticles();
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="" title="Empowering Visionary Founders">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          At ACTAI Advisors, we partner with exceptional entrepreneurs to scale
+          transformative ideas into impactful global businesses. Leveraging deep
+          relationships, strategic insights, and targeted capital, we equip
+          founders with essential tools and networks needed to successfully
+          navigate growth and innovation.
         </p>
       </PageIntro>
 
@@ -84,5 +87,5 @@ export default async function Blog() {
 
       <ContactSection />
     </>
-  )
+  );
 }
