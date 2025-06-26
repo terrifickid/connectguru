@@ -24,8 +24,6 @@ import dapperlabslogo from "@/images/dapperlabs.svg";
 import hut8logo from "@/images/hut8.png";
 import gigaverselogo from "@/images/gigaverse.webp";
 
-
-
 import logoBrightPath from "@/images/clients/bright-path/logo-dark.svg";
 import logoFamilyFund from "@/images/clients/family-fund/logo-dark.svg";
 import logoGreenLife from "@/images/clients/green-life/logo-dark.svg";
@@ -481,7 +479,9 @@ function Culture() {
             success stories, and strategic impact:
           </p>
 
-          <p className="text-2xl"><a href="#">Download Our Advisory Overview Deck (PDF)</a></p>
+          <p className="text-2xl hidden">
+            <a href="#">Download Our Advisory Overview Deck (PDF)</a>
+          </p>
         </div>
       </Container>
     </div>

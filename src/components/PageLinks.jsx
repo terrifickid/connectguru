@@ -85,10 +85,10 @@ export function PageLinks({ title, pages, intro, className }) {
         </p>
         <p class="text-xl mb-4 mt-4">
           Follow The Upwind Podcast on social media to stay updated on the
-          latest episodes:
+          latest episodes.
         </p>
 
-        <div class="mt-8 text-sm ">
+        <div class="mt-8 text-sm hidden ">
           <div class="flex flex-wrap gap-2 w-full">
             <img
               src={spotify.src}
@@ -109,7 +109,7 @@ export function PageLinks({ title, pages, intro, className }) {
             />
           </div>
 
-          <ul class="mt-8">
+          <ul class="mt-8 hidden">
             <li>
               <a href="#">Spotify</a>
             </li>
