@@ -35,6 +35,7 @@ export async function POST(request) {
     const spaceId = process.env.CONTENTFUL_SPACE_ID
     const accessToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN
     const environmentId = process.env.CONTENTFUL_ENVIRONMENT || 'master'
+    const contentTypeId = process.env.CONTENTFUL_CONTACT_CONTENT_TYPE || 'actaiApplication'
 
     if (!spaceId || !accessToken) {
       subLog.error(
@@ -85,13 +86,13 @@ export async function POST(request) {
     let entry
     try {
       subLog.info(
-        { ...phaseEntry(LOG_TYPE.CONTENTFUL_CREATE_START) },
-        'creating contactInquiry entry'
+        { ...phaseEntry(LOG_TYPE.CONTENTFUL_CREATE_START), contentTypeId },
+        'creating entry'
       )
 
       entry = await client.entry.create(
         {
-          contentTypeId: 'contactInquiry',
+          contentTypeId,
         },
         {
           fields: {
@@ -123,8 +124,9 @@ export async function POST(request) {
         {
           ...phaseEntry(LOG_TYPE.CONTENTFUL_CREATE_SUCCESS),
           entryId: entry.sys?.id,
+          contentTypeId,
         },
-        'contactInquiry entry created'
+        'entry created'
       )
     } catch (err) {
       const errInfo = serializeError(err, 'POST /api/contact.entry.create')
