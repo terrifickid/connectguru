@@ -22,13 +22,13 @@ export async function POST(request) {
       hasContactNumber: !!data.contactNumber,
       hasSocial: !!data.socialMediaHandles,
       companyLen: (data.nameOfCompany || '').length,
-      phase: data.phaseOfProject || null,
+      projectPhase: data.phaseOfProject || null,
       aboutLen: (data.aboutYourProject || '').length,
       hasWebsite: !!data.website,
     }
 
     subLog.info(
-      { ...phaseEntry(LOG_TYPE.FORM_RECEIVED), ...formSummary },
+      { ...phaseEntry(LOG_TYPE.FORM_RECEIVED), form: formSummary },
       'contact form submission received'
     )
 
@@ -96,16 +96,6 @@ export async function POST(request) {
         },
         {
           fields: {
-            title: {
-              'en-US': [
-                data.firstName,
-                data.lastName,
-                data.nameOfCompany ? `- ${data.nameOfCompany}` : '',
-              ]
-                .filter(Boolean)
-                .join(' ')
-                .trim() || 'Contact Inquiry',
-            },
             firstName: { 'en-US': data.firstName || '' },
             lastName: { 'en-US': data.lastName || '' },
             email: { 'en-US': data.email || '' },
@@ -115,7 +105,6 @@ export async function POST(request) {
             phaseOfProject: { 'en-US': data.phaseOfProject || '' },
             aboutYourProject: { 'en-US': data.aboutYourProject || '' },
             website: { 'en-US': data.website || '' },
-            submittedAt: { 'en-US': new Date().toISOString() },
           },
         }
       )
@@ -136,7 +125,7 @@ export async function POST(request) {
           functionName: 'POST /api/contact',
           ...phaseEntry(LOG_TYPE.CONTENTFUL_CREATE_ERROR),
           err: errInfo,
-          formSummary,
+          form: formSummary,
         },
         'Failed to create Contentful entry'
       )
