@@ -13,7 +13,7 @@ export async function POST(request) {
     if (!spaceId || !accessToken) {
       console.error('Missing Contentful env vars: CONTENTFUL_SPACE_ID or CONTENTFUL_MANAGEMENT_TOKEN')
       // Still redirect so user sees thanks; entry just won't be saved in dev without creds
-      return NextResponse.redirect(new URL('/thanks', request.url))
+      return NextResponse.redirect(new URL('/thanks', request.url), 303)
     }
 
     const client = createClient({ accessToken })
@@ -48,10 +48,10 @@ export async function POST(request) {
 
     await entry.publish()
 
-    return NextResponse.redirect(new URL('/thanks', request.url))
+    return NextResponse.redirect(new URL('/thanks', request.url), 303)
   } catch (error) {
     console.error('Failed to save contact form to Contentful:', error)
     // Redirect to thanks anyway (or could redirect to /contact?submitted=error)
-    return NextResponse.redirect(new URL('/thanks', request.url))
+    return NextResponse.redirect(new URL('/thanks', request.url), 303)
   }
 }
